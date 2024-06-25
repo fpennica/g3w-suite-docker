@@ -6,3 +6,11 @@
 .credit-title-logo, #address-credits {
     display: none !important;
 }
+
+.group-box .icon,
+#macrogroups_list .widget-user-header,
+#groups_list .widget-user-header {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
