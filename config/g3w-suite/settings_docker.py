@@ -123,7 +123,7 @@ HUEY = {
     },
 }
 
-USE_X_FORWARDED_HOST = True
+# USE_X_FORWARDED_HOST = True
 
 ALLOWED_HOSTS = "*"
 

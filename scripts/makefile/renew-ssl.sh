@@ -29,10 +29,11 @@ curl -s "$default_ssl_pem"  > "${certs_folder}/ssl-dhparams.pem"
 # STEP 2
 echo "### Requesting Let's Encrypt certificate for $domain ..."
 docker run -it --rm --name certbot --pull=missing \
+  -p 80:80 \
   -v ${certs_folder}:/etc/letsencrypt \
   -v ${acme_folder}:/var/www/.well-known \
   certbot/certbot -t certonly \
   --agree-tos --renew-by-default \
   --no-eff-email \
-  --webroot -w /var/www \
+  --standalone -w /var/www \
   -d ${domain}
