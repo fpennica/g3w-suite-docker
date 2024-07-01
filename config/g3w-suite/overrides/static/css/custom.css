@@ -10,7 +10,12 @@
 .group-box .icon,
 #macrogroups_list .widget-user-header,
 #groups_list .widget-user-header {
-    background-size: contain !important;
+    background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
+    height: 130px !important;
+}
+
+.group-box .icon {
+    margin: 0 0 15px 0 !important;
 }
