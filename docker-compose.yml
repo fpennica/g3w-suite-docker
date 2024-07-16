@@ -10,7 +10,7 @@ services:
       - ALLOW_IP_RANGE=0.0.0.0/0
       - RUN_AS_ROOT=true
       - FORCE_SSL=False
-    restart: on-failure
+    restart: unless-stopped
     logging:
       driver: "json-file"
       options:
