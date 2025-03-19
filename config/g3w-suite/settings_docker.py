@@ -123,7 +123,7 @@ HUEY = {
     },
 }
 
-USE_X_FORWARDED_HOST = True
+# USE_X_FORWARDED_HOST = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -219,3 +219,59 @@ if os.getenv('WEBGIS_PUBLIC_HOSTNAME', None):
         f"http://{os.getenv('WEBGIS_PUBLIC_HOSTNAME', None)}",
         f"http://{os.getenv('WEBGIS_PUBLIC_HOSTNAME', None)}:8080"
     ]
+
+
+##################################################################################################################
+# customizations: https://g3w-suite.readthedocs.io/en/latest/branding.html
+G3WSUITE_CUSTOM_STATIC_URL = '/static/'
+
+G3WSUITE_MAIN_LOGO = '/static/img/logo-home.png'
+# G3WSUITE_RID_LOGO = '/static/img/marchio-logo.png'
+G3WSUITE_LOGIN_LOGO = '/static/img/logo-home.png'
+# G3WSUITE_FAVICON
+
+# G3W-SUITE html page title. If is not set, title is: g3w-admin for admin section and g3w-client for webgis client.
+G3WSUITE_CUSTOM_TITLE = 'IGAG WebGIS Lab'
+
+G3WSUITE_CUSTOM_CSS = [
+    G3WSUITE_CUSTOM_STATIC_URL + 'css/custom.css'
+]
+
+G3WSUITE_POWERD_BY = False
+
+# G3W_CLIENT_HEADER_CUSTOM_LINKS = [
+#      {
+#          'url': 'https://gis3w.it',
+#          'title': 'Gis3W company',
+#          'i18n': True, #(False as default value)
+#          'target': '_blank',
+#          'img': 'https://gis3w.it/wp-content/uploads/2016/10/logo_qgis-1-100x100.png?x22227',
+#      },
+#      {
+#         'title': 'Modal 1',
+#         'content': '<p>Html example content to show in modal</p>',
+#         'type': 'modal',
+#         'position': 10
+#     },
+# ]
+
+# G3W_CLIENT_LEGEND = {
+#    'color': 'red',
+#    'fontsize': 8,
+#    'transparent': True,
+#    'boxspace': 4,
+#    'layerspace': 4,
+#    'layertitle': True,
+#    'layertitlespace': 4,
+#    'symbolspace': None,
+#    'iconlabelspace': 2,
+#    'symbolwidth': 8,
+#    'symbolheight': 4
+# }
+
+# G3W_CLIENT_RIGHT_PANEL = {
+#     'width': 33
+# }
+
+FRONTEND = True
+FRONTEND_APP = 'frontend'
