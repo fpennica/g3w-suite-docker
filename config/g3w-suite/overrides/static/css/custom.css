@@ -1,0 +1,8 @@
+.home-block .subtitle {
+    font-family: sans-serif;
+    font-size: 1.5em;
+}
+
+#map_footer_left img{
+    display: none !important;
+}
